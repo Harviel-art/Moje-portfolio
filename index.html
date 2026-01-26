@@ -63,6 +63,11 @@ nav a {color: white;
 /* Třída, kterou aplikujeme na prvky */
 .animate-text {animation: fadeInUp 1.5s ease-out forwards;}
 header p.animate-text {animation-delay:1.2; opacity: 0;}
+#lightbox {display: none; position: fixed; z-index: 2000; top:0; left: 100%; 
+width: 100%; height: 100%; backgroung: rgba(0,0,0,0.9); cursor :toom-out;
+justify-content: center; align-items: center;}
+#lightbox img {max-width: 90%; max-height: 90%; 
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);}
     </style>
 </head>
 <body>
@@ -90,6 +95,14 @@ header p.animate-text {animation-delay:1.2; opacity: 0;}
         <img src="images/foto3.jpg" alt="Mikrofotografie">
         <img src="images/foto4.jpg" alt="Mikrofotografie">
     </div>
-
+<script>
+    const images = document.guerySelectorAll('.gallery img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    images.forEach(img =>{img.addEventListener('click', ()=>{lightboxImg.src;
+        lightbox.style.display = 'flex'});})
+</script>
 </body>
+<div id="lightbox" onclick="this.stile.display='none'">
+</div>
 </html>
