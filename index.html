@@ -99,7 +99,8 @@ justify-content: center; align-items: center;}
     const images = document.guerySelectorAll('.gallery img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    images.forEach(img =>{img.addEventListener('click', () => {lightboxImg.src;
+    images.forEach(img =>{img.addEventListener('click', () => 
+    {lightboxImg.src = img.src;
         lightbox.style.display = 'flex';});});
 </script>
 </body>
