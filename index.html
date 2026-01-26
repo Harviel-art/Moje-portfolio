@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Art Portfolio</title>
+    <style>
+        /* Tady budeme psát CSS - design */
+        body {
+    background-color: #050505; /* Černo-šedá jako v temné komoře */
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #111, #050505);
+}
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 4px; /* Rozestup písmen pro "art" pocit */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.gallery {
+    display: grid; /* Modernější než Flexbox pro portfolia */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    transition: transform 0.4s ease; /* Plynulý pohyb */
+    filter: grayscale(20%); /* Jemný umělecký filtr */
+}
+
+.gallery img:hover {
+    transform: scale(1.02); /* Jemné zvětšení při najetí myší */
+    filter: grayscale(0%);
+    cursor: crosshair; /* Změna kurzoru na křížek pro "mikro" zaměření */
+}
+    /* Styl pro menu */
+nav {
+    position: sticky; /* Menu zůstane nahoře při scrollování */
+    top: 0;
+    background: rgba(10, 10, 10, 0.9);
+    padding: 20px;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+/* Styl pro sekce s textem */
+.content-section {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Vycentrování textu na střed */
+    line-height: 1.6;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: white;
+    color: black;
+}
+/* Definice animace */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Začne o 30px níž */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Skončí na své pozici */
+    }
+}
+
+/* Třída, kterou aplikujeme na prvky */
+.animate-text {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+header p.animate-text {animatuon-delay:1.2; opacity: 0;}
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#galerie">Galerie</a>
+    <a href="#o-mne">O mně</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+    <h1 class="animate-text">Mikrosvět a Art</h1>
+    <p class="animate-text">Vítejte v mém portfoliu. Zaměřuji se na detail, který oko běžně nevidí.</p>
+    <div id="galerie" class="gallery">
+<section id="o-mne" class="content-section">
+    <h2>O mně</h2>
+    <p>Věnuji se digitálnímu umění a mikrofotografii. Fascinuje mě mikrosvět a detaily, které běžně přehlížíme.</p>
+</section>
+
+<section id="kontakt" class="content-section">
+    <h2>Kontakt</h2>
+    <p>Máš zájem o spolupráci? Napiš mi.</p>
+    <a href="mailto:tvuj@email.cz" class="contact-button">Poslat e-mail</a>
+</section>
+    <div class="gallery">
+        <img src="images/foto1.jpg" alt="Detail makro">
+        <img src="images/foto2.jpg" alt="Digitální art">
+        <img src="images/foto3.jpg" alt="Mikrofotografie">
+    </div>
+
+</body>
+</html>
