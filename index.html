@@ -63,11 +63,23 @@ nav a {color: white;
 /* Třída, kterou aplikujeme na prvky */
 .animate-text {animation: fadeInUp 1.5s ease-out forwards;}
 header p.animate-text {animation-delay:1.2; opacity: 0;}
-#lightbox {display: none; position: fixed; z-index: 2000; top: 0; left: 0; 
-width: 100%; height: 100%; background: rgba(0,0,0,0.9); cursor :zoom-out;
-justify-content: center; align-items: center;}
-#lightbox img {max-width: 90%; max-height: 90%; 
-    box-shadow: 0 0 20px rgba(255,255,255,0.1);}
+#lightbox {
+    display: none; /* Zatím neviditelný */
+    position: fixed;
+    z-index: 2000;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    cursor: zoom-out;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
     </style>
 </head>
 <body>
@@ -96,15 +108,20 @@ justify-content: center; align-items: center;}
         <img src="images/foto4.jpg" alt="Mikrofotografie">
     </div>
 <script>
-    const images = document.guerySelectorAll('.gallery img');
+   const images = document.querySelectorAll('.gallery img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    images.forEach(img =>{img.addEventListener('click', () => 
-    {lightboxImg.src = img.src;
-        lightbox.style.display = 'flex';});});
+
+    //* Ke každé fotce přidáme "posluchač" na kliknutí
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src; //* Zkopírujeme adresu fotky
+            lightbox.style.display = 'flex'; //* Ukážeme lightbox
+        });
+    });
 </script>
 </body>
-<div id="lightbox" onclick="this.stile.display='none'">
-    <img id="lightbox-img" src="" alt="zvestseny detail">
+<div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="Zvětšený detail">
 </div>
 </html>
