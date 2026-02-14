@@ -99,7 +99,7 @@ header p.animate-text {animation-delay:1.2; opacity: 0;}
 <section id="kontakt" class="content-section">
     <h2>Kontakt</h2>
     <p>Máš zájem o spolupráci? Napiš mi.</p>
-    <a href="mailto:tvuj@email.cz" class="contact-button">Poslat e-mail</a>
+    <a href="mailto:remca18@email.cz" class="contact-button">Poslat e-mail</a>
 </section>
     <div class="gallery">
         <img src="images/foto1.jpg" alt="Detail makro">
@@ -107,6 +107,14 @@ header p.animate-text {animation-delay:1.2; opacity: 0;}
         <img src="images/foto3.jpg" alt="Mikrofotografie">
         <img src="images/foto4.jpg" alt="Mikrofotografie">
     </div>
+</section>
+<div class="IT-project">
+    <h2 class="animate-text">Aktuální zaměření</h2>
+    <code style="color: #4af626; background: #000; padding: 10px; display: block; border-left: 3px solid #4af626;">
+        # Skill set <br>
+        tech_stack = ["Python", "OOP Reporting", "Debugging", "Data Analysis"]
+    </code>
+</div>
 <script>
    const images = document.querySelectorAll('.gallery img');
     const lightbox = document.getElementById('lightbox');
@@ -119,9 +127,11 @@ header p.animate-text {animation-delay:1.2; opacity: 0;}
             lightbox.style.display = 'flex'; //* Ukážeme lightbox
         });
     });
+    
 </script>
-</body>
 <div id="lightbox" onclick="this.style.display='none'">
-    <img id="lightbox-img" src="" alt="Zvětšený detail">
+     <img id="lightbox-img" src="" alt="Zvětšený detail">
+</body>
+</div>
 </div>
 </html>
