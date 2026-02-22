@@ -95,25 +95,29 @@ header p.animate-text {animation-delay:1.2; opacity: 0;}
     <h2>O mně</h2>
     <p>Věnuji se digitálnímu umění a mikrofotografii. Fascinuje mě mikrosvět a detaily, které běžně přehlížíme.</p>
 </section>
-
+<section id=""it-projekt class="IT-project"> 
+    <h2 class="animate-text">Aktuální zaměření</h2>
+    <p>Python, OOP Reporting, Debugging, Data Analysis</p>
+    <code style="color: #4af626; background: #000; padding: 10px; display: block; border-left: 3px solid #4af626;">
+        # Skill set <br>
+        tech_stack = ["python", "OOP", "Data Analysis", "Debugging", "Critical Management"]
+    </code>
+</section>
 <section id="kontakt" class="content-section">
     <h2>Kontakt</h2>
     <p>Máš zájem o spolupráci? Napiš mi.</p>
     <a href="mailto:remca18@email.cz" class="contact-button">Poslat e-mail</a>
 </section>
-    <div class="gallery">
+<section id="gallery" class="gallery">
+    <div >
         <img src="images/foto1.jpg" alt="Detail makro">
         <img src="images/foto2.jpg" alt="Digitální art">
         <img src="images/foto3.jpg" alt="Mikrofotografie">
         <img src="images/foto4.jpg" alt="Mikrofotografie">
     </div>
 </section>
-<div class="IT-project">
-    <p></p> class="animate-text">Aktuální zaměření</p>
-    <code style="color: #4af626; background: #000; padding: 10px; display: block; border-left: 3px solid #4af626;">
-        # Skill set <br>
-        tech_stack = ["Python", "OOP Reporting", "Debugging", "Data Analysis"]
-    </code>
+<div id="lightbox" onclick="this.style.display='none'">
+     <img id="lightbox-img" src="" alt="Zvětšený detail">
 </div>
 <script>
    const images = document.querySelectorAll('.gallery img');
@@ -129,9 +133,5 @@ header p.animate-text {animation-delay:1.2; opacity: 0;}
     });
     
 </script>
-<div id="lightbox" onclick="this.style.display='none'">
-     <img id="lightbox-img" src="" alt="Zvětšený detail">
 </body>
-</div>
-</div>
 </html>
